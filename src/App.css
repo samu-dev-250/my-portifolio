@@ -1,0 +1,221 @@
+/* =========================================
+   CONTAINER (layout rusange)
+   ========================================= */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* H1 muri container — ntibe nini cyane */
+.container h1 {
+  text-align: center;
+  color: #1d3557;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* =========================================
+   NAVBAR (Link na NavLink)
+   ========================================= */
+.container nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.container nav a {
+  color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.container nav a:hover {
+  background-color: #e6f0fa;
+  color: #2878b5;
+  text-decoration: none;
+}
+
+/* NavLink active state (iyo uri kuri page) */
+.container nav a.active,
+.container nav a[aria-current="page"] {
+  background-color: #e6f0fa;
+  color: #2878b5;
+  font-weight: bold;
+}
+
+/* =========================================
+   STUDENT CARD
+   ========================================= */
+.student-card {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid #2878b5;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px #cccccc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #b0b0b0;
+}
+
+.student-card h2 {
+  color: #2878b5;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.student-card p {
+  color: #333333;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+/* =========================================
+   LINKS muri pages (ntizibe nk'ibara)
+   ========================================= */
+a {
+  color: #2878b5;
+}
+
+a:hover {
+  color: #1d3557;
+}
+
+/* =========================================
+   PAGE HEADINGS
+   ========================================= */
+.page-title {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   BACK LINK (muri StudentDetail)
+   ========================================= */
+.back-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2878b5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   404 PAGE
+   ========================================= */
+.not-found {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.not-found h1 {
+  font-size: 72px;
+  color: #2878b5;
+  margin: 0;
+}
+
+.not-found h2 {
+  font-size: 24px;
+  color: #1d3557;
+  margin: 10px 0 20px;
+}
+
+.not-found p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.not-found a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2878b5;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.not-found a:hover {
+  background: #1d3557;
+  text-decoration: none;
+}
+
+/* =========================================
+   NESTED SETTINGS NAV
+   ========================================= */
+.settings-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.settings-nav a {
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.settings-nav a:hover {
+  background: #e6f0fa;
+  color: #2878b5;
+}
+
+/* =========================================
+   LOGIN BUTTON
+   ========================================= */
+.login-box {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #cccccc;
+  text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 600px) {
+  .container {
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .container nav {
+    gap: 8px;
+  }
+
+  .container nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}

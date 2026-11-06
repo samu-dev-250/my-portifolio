@@ -1,0 +1,464 @@
+/* =========================================
+   1. GLOBAL STYLES & RESET
+   ========================================= */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0a0f1e; /* Dark theme background */
+  color: #e2e8f0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 0 24px; 
+}
+
+section { 
+  padding: 80px 0; 
+  border-top: 1px solid #1e293b; 
+}
+
+h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 12px; color: #ffffff; }
+h2 { font-size: 1.75rem; margin-bottom: 20px; color: #38bdf8; }
+h3 { font-size: 1.25rem; margin-bottom: 8px; color: #ffffff; }
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+  position: sticky; 
+  top: 0; 
+  z-index: 50;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo { 
+  font-weight: 800; 
+  font-size: 1.3rem; 
+  color: #38bdf8; 
+  text-decoration: none; 
+  letter-spacing: 1px;
+}
+
+.nav-links { 
+  display: flex; 
+  gap: 24px; 
+}
+
+.nav-links a { 
+  color: #94a3b8; 
+  text-decoration: none; 
+  font-size: 0.95rem; 
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { 
+  color: #38bdf8; 
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: center;
+  padding: 100px 0 80px;
+  border-top: none;
+}
+
+.eyebrow { 
+  color: #38bdf8; 
+  font-size: 1rem; 
+  font-weight: 600;
+  margin-bottom: 8px; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tagline { 
+  color: #94a3b8; 
+  font-size: 1.15rem; 
+  margin: 16px 0 32px; 
+  max-width: 480px; 
+}
+
+.buttons { 
+  display: flex; 
+  gap: 16px; 
+  flex-wrap: wrap; 
+}
+
+.btn {
+  padding: 12px 24px; 
+  border: 2px solid #38bdf8; 
+  border-radius: 8px;
+  color: #38bdf8; 
+  text-decoration: none; 
+  font-size: 0.95rem; 
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn.primary { 
+  background: #38bdf8; 
+  color: #0a0f1e; 
+}
+
+.btn:hover { 
+  opacity: 0.9; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+.hero-photo img {
+  width: 100%; 
+  aspect-ratio: 1; 
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+/* =========================================
+   4. TAGS & SKILLS
+   ========================================= */
+.tags { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  margin-top: 20px; 
+}
+
+.tag {
+  background: #1e293b; 
+  padding: 6px 14px; 
+  border-radius: 999px;
+  font-size: 0.85rem; 
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+/* =========================================
+   5. PROJECTS GRID & CARDS
+   ========================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px; 
+  margin-top: 32px;
+}
+
+.card {
+  background: #111827; 
+  border: 1px solid #1e293b; 
+  border-radius: 12px;
+  overflow: hidden; 
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { 
+  transform: translateY(-5px); 
+  border-color: #38bdf8; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-img { 
+  width: 100%; 
+  aspect-ratio: 16/9; 
+  object-fit: cover; 
+  display: block; 
+  border-bottom: 1px solid #1e293b;
+}
+
+.card-body { 
+  padding: 24px; 
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Kugira ngo links zose zibe ku murongo umwe hasi */
+}
+
+.card p { 
+  color: #94a3b8; 
+  font-size: 0.95rem; 
+  margin-bottom: 16px;
+}
+
+.links { 
+  display: flex; 
+  gap: 16px; 
+  margin-top: auto; /* Iri janisha rituma links zjya hasi */
+  padding-top: 16px;
+}
+
+.links a { 
+  color: #38bdf8; 
+  text-decoration: none; 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+}
+
+.links a:hover { 
+  text-decoration: underline; 
+}
+
+/* =========================================
+   6. LOGIN FORM (PROJECT 1)
+   ========================================= */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  background: #0a0f1e;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #38bdf8;
+}
+
+.login-form .btn {
+  border: none;
+  padding: 12px;
+}
+
+.login-msg {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* =========================================
+   7. TODO LIST (PROJECT 2)
+   ========================================= */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  background: #0a0f1e;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.todo-form input:focus {
+  border-color: #38bdf8;
+}
+
+.todo-form .btn {
+  border: none;
+  padding: 0 16px;
+  font-size: 1.2rem;
+}
+
+.todo-list {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #0a0f1e;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.todo-item span {
+  cursor: pointer;
+  flex: 1;
+}
+
+.todo-item.done span {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.todo-del {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.todo-del:hover {
+  color: #ef4444;
+}
+
+.todo-empty {
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  font-style: italic;
+}
+
+/* =========================================
+   8. CALCULATOR (PROJECT 3)
+   ========================================= */
+.calc-display {
+  background: #0a0f1e;
+  color: #38bdf8;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #1e293b;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: auto;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.calc-btn {
+  padding: 14px;
+  background: #1e293b;
+  color: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.calc-btn:hover {
+  background: #38bdf8;
+  color: #0a0f1e;
+}
+
+.calc-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================================
+   9. CONTACT & SOCIAL LINKS
+   ========================================= */
+.social-row { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+  margin-top: 24px; 
+}
+
+.social-btn {
+  padding: 12px 24px; 
+  border: 1px solid #1e293b; 
+  border-radius: 8px;
+  background: #111827; 
+  color: #e2e8f0; 
+  text-decoration: none;
+  font-size: 0.95rem; 
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.social-btn:hover { 
+  border-color: #38bdf8; 
+  color: #38bdf8; 
+  transform: translateY(-2px); 
+  background: #0f172a;
+}
+
+/* =========================================
+   10. FOOTER
+   ========================================= */
+footer {
+  text-align: center; 
+  padding: 40px 0; 
+  color: #64748b;
+  font-size: 0.9rem; 
+  border-top: 1px solid #1e293b;
+}
+
+/* =========================================
+   11. MOBILE RESPONSIVE (Media Queries)
+   ========================================= */
+@media (max-width: 768px) {
+  .hero { 
+    grid-template-columns: 1fr; 
+    text-align: center; 
+    padding: 60px 0; 
+    gap: 32px;
+  }
+  
+  .hero-photo { 
+    max-width: 220px; 
+    margin: 0 auto; 
+  }
+  
+  .tagline { 
+    margin: 16px auto 32px; 
+  }
+  
+  .buttons { 
+    justify-content: center; 
+  }
+  
+  h1 { font-size: 2.2rem; }
+  
+  .nav-links { 
+    gap: 16px; 
+  }
+  
+  .nav-links a { 
+    font-size: 0.85rem; 
+  }
+}
